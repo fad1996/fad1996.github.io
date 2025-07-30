@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun, Fanny ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: url('IMG_3828.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px) brightness(0.7);
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 600px;
+      width: 90%;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #ffe6ea;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #fefefe;
+    }
+
+    .heart {
+      font-size: 2.2em;
+      color: #ff88a2;
+      margin-top: 25px;
+      cursor: pointer;
+      animation: pulse 1.5s infinite;
+    }
+
+    #extraMessage {
+      display: none;
+      margin-top: 20px;
+      font-style: italic;
+      color: #ffdfe7;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .heart {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="card">
+    <h1>Selamat Ulang Tahun, Fanny! 💖</h1>
+    <p>
+      Di hari yang spesial ini, aku ingin kamu tahu betapa berharganya dirimu bagiku.  
+      Senyummu adalah kebahagiaanku, dan hadirmu adalah anugerah terbesar dalam hidupku.  
+      Semoga hari ini dan seterusnya kamu selalu bahagia, dicintai, dan diberkati.  
+    </p>
+
+    <div class="heart" onclick="showMessage()">💖</div>
+    <div id="extraMessage">Aku akan selalu mencintaimu, sekarang dan selamanya 🌹</div>
+  </div>
+
+  <audio autoplay loop hidden>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function showMessage() {
+      const msg = document.getElementById('extraMessage');
+      msg.style.display = msg.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
